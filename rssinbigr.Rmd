@@ -1,6 +1,6 @@
 ---
 title: "RSSinBIGR"
-author: "Yemalin Godonou"
+author: "Marlingod"
 date: "August 25, 2016"
 output: html_document
 ---
@@ -25,7 +25,7 @@ getwd()
 setwd('C:\\Users\\god9690\\Documents\\BigR\\RSS')
 my.pwd<- readLines("passwd.txt", warn = FALSE)
 bigr.connect(host="ehaasp-10811-master-3.bi.services.bluemix.net", 
-            user="yemalingodonou",
+            user="marlingod",
             password=my.pwd,
             ssl=TRUE, 
             trustStorePath = "c:\\Temp\\cacerts",
@@ -45,7 +45,7 @@ rss <- read.csv('APS_nochi.csv', header = TRUE,nrows =10, na.strings = c("NA",''
 char <-which(colnames(rss)%in%c(fac_var,char_var ))
 
 # document how to read the data in recent
-rssBig <- bigr.frame(dataPath = "/user/yemalingodonou/RSS/rss_data0825.csv",
+rssBig <- bigr.frame(dataPath = "/user/marlingod/RSS/rss_data0825.csv",
                   dataSource = "DEL",
                   delimiter=",", header = T,
                   #colnames = var_var,
@@ -111,7 +111,7 @@ testBig<- sample.big[[2]]
 dummy.var <-readLines('variables/dummy.txt')
 missing.var<- bigr.which.na.cols(rssBig.work)
 rssBM <- bigr.transform(bf = rssBig.work, outData = "/user/yemalingodonou/RSS/forest/rss991.mtx",
-                         transformPath = "/user/yemalingodonou/RSS/forest/rss991.transform",
+                         transformPath = "/user/marlingod/RSS/forest/rss991.transform",
                          missingAttrs = missing.var,
                         imputationMethod=c("global_mode"), 
                         dummycodeAttrs =dummy.var
@@ -127,7 +127,7 @@ testBig<- sample.big[[2]]
 forest <- bigr.randomForest(PM_IND ~ ., trainBig, directory="/user/yemalingodonou/RSS/forest/RF")
 
 # Compute predictions for the testing set
-preds <- predict(forest, testBig, directory="/user/yemalingodonou/RSS/forest.pred")
+preds <- predict(forest, testBig, directory="/user/marlingod/RSS/forest.pred")
 preds$ctable
 preds$accuracy
 
