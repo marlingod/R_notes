@@ -1,4 +1,4 @@
-setwd("C:/Users/haj02/Documents/ICO")
+setwd("")
 getwd()
 
 library(ggplot2)
