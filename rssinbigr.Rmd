@@ -24,7 +24,7 @@ library(bigr)
 getwd()
 setwd('C:\\Users\\god9690\\Documents\\BigR\\RSS')
 my.pwd<- readLines("passwd.txt", warn = FALSE)
-bigr.connect(host="ehaasp-10811-master-3.bi.services.bluemix.net", 
+bigr.connect(host="something.com", 
             user="marlingod",
             password=my.pwd,
             ssl=TRUE, 
@@ -110,7 +110,7 @@ testBig<- sample.big[[2]]
 ## dummy
 dummy.var <-readLines('variables/dummy.txt')
 missing.var<- bigr.which.na.cols(rssBig.work)
-rssBM <- bigr.transform(bf = rssBig.work, outData = "/user/yemalingodonou/RSS/forest/rss991.mtx",
+rssBM <- bigr.transform(bf = rssBig.work, outData = "/user/marlingod/RSS/forest/rss991.mtx",
                          transformPath = "/user/marlingod/RSS/forest/rss991.transform",
                          missingAttrs = missing.var,
                         imputationMethod=c("global_mode"), 
@@ -124,7 +124,7 @@ testBig<- sample.big[[2]]
 
 # Build a Random Forest Classifier using the training set
 # charater variables mneed to the
-forest <- bigr.randomForest(PM_IND ~ ., trainBig, directory="/user/yemalingodonou/RSS/forest/RF")
+forest <- bigr.randomForest(PM_IND ~ ., trainBig, directory="/user/marlingod/RSS/forest/RF")
 
 # Compute predictions for the testing set
 preds <- predict(forest, testBig, directory="/user/marlingod/RSS/forest.pred")
