@@ -1,6 +1,6 @@
 ---
 title: "RSS_V1"
-author: "Yemalin Godonou"
+author: "Malingod"
 date: "August 9, 2016"
 output: html_document
 ---
