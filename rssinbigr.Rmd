@@ -1,0 +1,134 @@
+---
+title: "RSSinBIGR"
+author: "Yemalin Godonou"
+date: "August 25, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load the data in the in the biginsight cluster
+1. use winscp to load the data
+  it took 33 mn to load the 1.9M rows, 194 columns 1G of data in envorimnmnet
+2. Create a hdfs folder
+  hdfs dfs -mkdir RSS
+3. copy the local folder to hdfs environment
+  hdfs dfs -copyFromLocal <filename> /RSS/filename
+  or hdfs dfs -put <filename> /RSS/filename
+
+```{r cars}
+library(bigr)
+# connect to biginsight
+getwd()
+setwd('C:\\Users\\god9690\\Documents\\BigR\\RSS')
+my.pwd<- readLines("passwd.txt", warn = FALSE)
+bigr.connect(host="ehaasp-10811-master-3.bi.services.bluemix.net", 
+            user="yemalingodonou",
+            password=my.pwd,
+            ssl=TRUE, 
+            trustStorePath = "c:\\Temp\\cacerts",
+            trustStorePassword="changeit",
+            keyManager="SunX509")
+is.bigr.connected()
+
+# point the data in the bigR object
+fac_var<-readLines('variables/factors.txt')
+num_var <-readLines('variables/numeric.txt')
+char_var <-readLines('variables/character.txt')
+
+# read the column of the data 
+rss <- read.csv('APS_nochi.csv', header = TRUE,nrows =10, na.strings = c("NA",''))
+
+# get the column index
+char <-which(colnames(rss)%in%c(fac_var,char_var ))
+
+# document how to read the data in recent
+rssBig <- bigr.frame(dataPath = "/user/yemalingodonou/RSS/rss_data0825.csv",
+                  dataSource = "DEL",
+                  delimiter=",", header = T,
+                  #colnames = var_var,
+                 coltypes = ifelse(1:193 %in% char,
+                                 "character", "numeric"),
+                  useMapReduce = T)
+
+str(rssBig)
+head(rssBig$POLICY_NUMBER)
+
+dollar <- function(x){
+  b<- gsub('$', '',x)
+  b
+}
+
+#remove some column per calculations
+
+drop<-readLines('variables/drop.txt')
+# get the colum index
+dro.var <-which(colnames(rssBig) %in% drop)
+rssBig.drop <- rssBig[, -(dro.var)]
+str(rssBig.drop)
+
+```
+
+``` {r subset_filtering_data }
+# regular subset will not run with th bigr.frame
+
+rssBig.filter<- rssBig.drop[(  rssBig.drop$AAAPS =='1'
+                             & rssBig.drop$CHI =='1'
+                             & rssBig.drop$SRCE_FILE_YEAR_NUM !='2015'
+                             & rssBig.drop$AGE <=60
+                             & rssBig.drop$UNDERWRITE_AMT <=2000000),]
+
+
+## remove column
+rem <-c("CHI","AAAPS", "POLICY_NUMBER", 'SRCE_FILE_YEAR_NUM','FCTI','FCT3','DEBI','FCT5')
+rem<- which(colnames(rssBig.filter) %in% c("CHI","AAAPS", "POLICY_NUMBER", 'SRCE_FILE_YEAR_NUM','FCTI','FCT3','DEBI','FCT5'))
+rssBig.work <- rssBig.filter[, -(rem)]
+nrow(rssBig.filter)
+ncol(rssBig.work)
+
+```
+
+```{r create_partition }
+table(rssBig.work$PM_IND =='1')
+indexes<- sample(1:nrow(rssBig.work),
+                 size = floor(nrow(rssBig.work)*0.7)
+                 )
+
+#not working
+#training.Big <-rssBig.work[indexes,]
+#big r way######################
+sample.big <-bigr.sample(rssBig.work, perc = c(0.7,0.3))
+trainBig <- sample.big[[1]]
+testBig<- sample.big[[2]]
+
+
+# matrix fo the bigr.frame
+# bigr.transform() does not work for data with missing variables. must include missing variables
+# character varaibles must be dummy coded.
+## dummy
+dummy.var <-readLines('variables/dummy.txt')
+missing.var<- bigr.which.na.cols(rssBig.work)
+rssBM <- bigr.transform(bf = rssBig.work, outData = "/user/yemalingodonou/RSS/forest/rss991.mtx",
+                         transformPath = "/user/yemalingodonou/RSS/forest/rss991.transform",
+                         missingAttrs = missing.var,
+                        imputationMethod=c("global_mode"), 
+                        dummycodeAttrs =dummy.var
+                        )
+
+sample.big <-bigr.sample(rssBM, perc = c(0.7,0.3))
+trainBig <- sample.big[[1]]
+testBig<- sample.big[[2]]
+
+
+# Build a Random Forest Classifier using the training set
+# charater variables mneed to the
+forest <- bigr.randomForest(PM_IND ~ ., trainBig, directory="/user/yemalingodonou/RSS/forest/RF")
+
+# Compute predictions for the testing set
+preds <- predict(forest, testBig, directory="/user/yemalingodonou/RSS/forest.pred")
+preds$ctable
+preds$accuracy
+
+``` 

@@ -1,0 +1,376 @@
+*------------------------------------------------------------*
+User:                god9690
+Date:                August 08, 2016
+Time:                14:47:58
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+            Measurement    Frequency
+Role           Level         Count
+ 
+ASSESS       INTERVAL           4
+ID           NOMINAL            1
+INPUT        INTERVAL         159
+INPUT        NOMINAL           29
+REJECTED     NOMINAL            1
+ 
+ 
+ 
+ 
+Modified Attributes for DATA Port
+ 
+                             Measurement      New                                        New                 New
+Variable Name                   Level        Level       Role     New Role    Report    Report    Order     Order     Creator    Label
+ 
+AAAPS                         INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+AVIATION_SECTION              NOMINAL       BINARY      INPUT     DEFAULT       N         D                DEFAULT
+AVOCATION_SECTION             NOMINAL       BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Allergist_ind                 INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+BAD_DIABETES                  INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+BIG_IND                       INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+BP_DEB                        INTERVAL      INTERVAL    ASSESS    INPUT         N         D                DEFAULT
+CAP_NET_DEBITS                INTERVAL      INTERVAL    INPUT     TARGET        N         D                DEFAULT
+CHI                           INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_AllergyImp                INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_AnxietyStressImp          INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_AsthmImp                  INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_AviaInd                   INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_BirthdateDte              NOMINAL       DEFAULT     INPUT     REJECTED      N         D                DEFAULT
+CHI_BldStoolImp               INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_ChestPain                 INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_CystTumorLumpImp          INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_Diabetes                  INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_DpressionImp              INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_DrivingVioInd             INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_DrugAlcCategory           INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_DrugsInd                  INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_EsoRefHrtImp              INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_HeadacheImp               INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_HighBP                    INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_InterviewCaseStartDte     NOMINAL       DEFAULT     INPUT     REJECTED      N         D                DEFAULT
+CHI_InterviewYear             NOMINAL       DEFAULT     INPUT     REJECTED      N         D                DEFAULT
+CHI_IntrvwTypeTxt             NOMINAL       DEFAULT     INPUT     REJECTED      N         D                DEFAULT
+CHI_KidneyStonesImp           INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_MolesNevi                 INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_NerBowImp                 INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_O_NUM                     NOMINAL       DEFAULT     INPUT     REJECTED      N         D                DEFAULT
+CHI_OthArrestInd              INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_PanAttckImp               INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_Policy                    NOMINAL       DEFAULT     INPUT     REJECTED      N         D                DEFAULT
+CHI_PolypImp                  INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_PregInferImp              INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_RefractSurg               INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_RqtOrdNum                 NOMINAL       DEFAULT     INPUT     REJECTED      N         D                DEFAULT
+CHI_SeizureImp                INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_SkinCancer                INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_SleepApnImp               INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_SmokingInd                INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_StmGIPrbImp               INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_SurgeryHospImp            INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_TobaccoMedsInd            INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+CHI_TreatmentInd              INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Cardiologist_ind              INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Chiropractor_ind              INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Colorectal_ind                INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Counselor_ind                 INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+DEATHS                        INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+DECLINED_RATED                NOMINAL       BINARY      INPUT     DEFAULT       N         D                DEFAULT
+DRIVING_SECTION               NOMINAL       BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Dermatologist_ind             INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+ENT_ind                       INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Endocrinologist_ind           INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Gastroenterologist_ind        INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+LABSCOUNT                     INTERVAL      ORDINAL     INPUT     DEFAULT       N         D                DEFAULT
+LC_IND                        INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+MASTER_CMPN_STS               NOMINAL       BINARY      INPUT     DEFAULT       N         D                DEFAULT
+NET_DEBITS                    INTERVAL      DEFAULT     INPUT     TARGET        N         D                DEFAULT
+NOT_PM_IND                    INTERVAL      DEFAULT     INPUT     REJECTED      N         D                DEFAULT
+NOT_TAKEN_IND                 NOMINAL       BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Nephrologists_ind             INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Neurologist_ind               INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+OBGYN_ind                     INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Oncologist_ind                INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Ophthalmologist_ind           INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Opthamologist_ind             INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Orthopedist_ind               INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Other_ind                     INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+PM_IND                        INTERVAL      BINARY      INPUT     TARGET        N         D                DEFAULT
+POLICY_NUMBER                 NOMINAL       DEFAULT     INPUT     ID            N         D                DEFAULT               POLICY_NUMBER
+PVAM                          INTERVAL      DEFAULT     INPUT     COST          N         D                DEFAULT               PVAM
+PVAM_ADJ                      INTERVAL      DEFAULT     INPUT     COST          N         D                DEFAULT
+PVAM_ADK                      INTERVAL      DEFAULT     INPUT     COST          N         D                DEFAULT
+PVAM_CLS                      INTERVAL      DEFAULT     INPUT     COST          N         D                DEFAULT
+PVAM_NT2TO                    INTERVAL      DEFAULT     INPUT     COST          N         D                DEFAULT
+Physical_ind                  INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Plastic_ind                   INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Podiatrist_ind                INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Psychologist_ind              INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Pulmonologist_ind             INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+REQ_COST                      INTERVAL      DEFAULT     INPUT     COST          N         D                DEFAULT
+RPT_PRD                       NOMINAL       DEFAULT     INPUT     REJECTED      N         D                DEFAULT
+Rheumatologist_ind            INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+SRCE_FILE_YEAR_NUM            INTERVAL      NOMINAL     INPUT     DEFAULT       N         D                DEFAULT
+Therapist_ind                 INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+Urologist_ind                 INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+WAIVER_OF_PREM                NOMINAL       BINARY      INPUT     DEFAULT       N         D                DEFAULT
+all_decline                   INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+allergy_bp                    INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+apnea_bp                      INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+apnea_high_bmi                INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+ashtm_allergy                 INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+aviation                      INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+avocation                     INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+bp_bmi                        INTERVAL      INTERVAL    ASSESS    INPUT         N         D                DEFAULT
+bp_chol                       INTERVAL      INTERVAL    ASSESS    INPUT         N         D                DEFAULT
+bp_lab                        INTERVAL      INTERVAL    ASSESS    INPUT         N         D                DEFAULT
+crd_ind                       INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+dclrtd_ind                    INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+deaths_adj                    INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+driving                       INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+exact                         INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+high_agi_zip                  INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+high_bmi                      INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+lay_ind                       INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+low_agi_zip                   INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+male_ind                      INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+mib                           INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+nm_uw_int_class               INTERVAL      NOMINAL     INPUT     REJECTED      N         D                DEFAULT
+old_ind                       INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+perm_ind                      INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+pp_ind                        INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+prior_dcl                     INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+prior_di_dcl                  INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+prior_pm                      INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+qa_missing                    INTERVAL      NOMINAL     INPUT     DEFAULT       N         D                DEFAULT
+qa_sum                        INTERVAL      NOMINAL     INPUT     DEFAULT       N         D                DEFAULT
+secmd_ind                     INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+smoke_ind                     INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+surgery_allergy               INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+surgery_anxiety               INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+surgery_bp                    INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+surgery_chest                 INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+surgery_moles                 INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+ultra_agi_zip                 INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+uw_0608                       INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+uw_0911                       INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+vet_agent                     INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+xpcd_rating                   INTERVAL      BINARY      INPUT     DEFAULT       N         D                DEFAULT
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+Exported Attributes for TRAIN Port
+(maximum 500 observations printed)
+ 
+                                         Measurement
+Variable Name                Role           Level       Creator    Label
+ 
+AAAPS                        INPUT        BINARY
+AGE                          INPUT        INTERVAL
+AGENT                        INPUT        NOMINAL
+ANTICIPATED_PREPAID_CLASS    INPUT        NOMINAL
+AVIATION_SECTION             INPUT        BINARY
+AVOCATION_SECTION            INPUT        BINARY
+Allergist_ind                INPUT        BINARY
+Avg_AGI                      INPUT        INTERVAL                 Avg AGI
+BAD_DIABETES                 INPUT        BINARY
+BIG_IND                      INPUT        BINARY
+BMI                          INPUT        INTERVAL
+BMI_DEB                      INPUT        INTERVAL
+BP_DEB                       INPUT        INTERVAL
+CAP_NET_DEBITS               TARGET       INTERVAL
+CHI                          INPUT        BINARY
+CHI_AllergyImp               INPUT        BINARY
+CHI_AnxietyStressImp         INPUT        BINARY
+CHI_AsthmImp                 INPUT        BINARY
+CHI_AviaInd                  INPUT        BINARY
+CHI_BirthdateDte             REJECTED     NOMINAL
+CHI_BldStoolImp              INPUT        BINARY
+CHI_ChestPain                INPUT        BINARY
+CHI_CystTumorLumpImp         INPUT        BINARY
+CHI_Diabetes                 INPUT        BINARY
+CHI_DpressionImp             INPUT        BINARY
+CHI_DrivingVioInd            INPUT        BINARY
+CHI_DrugAlcCategory          INPUT        BINARY
+CHI_DrugsInd                 INPUT        BINARY
+CHI_EsoRefHrtImp             INPUT        BINARY
+CHI_HeadacheImp              INPUT        BINARY
+CHI_HighBP                   INPUT        BINARY
+CHI_InterviewCaseStartDte    REJECTED     NOMINAL
+CHI_InterviewYear            REJECTED     NOMINAL
+CHI_IntrvwTypeTxt            REJECTED     NOMINAL
+CHI_KidneyStonesImp          INPUT        BINARY
+CHI_MolesNevi                INPUT        BINARY
+CHI_NerBowImp                INPUT        BINARY
+CHI_O_NUM                    REJECTED     NOMINAL
+CHI_OthArrestInd             INPUT        BINARY
+CHI_PanAttckImp              INPUT        BINARY
+CHI_Policy                   REJECTED     NOMINAL
+CHI_PolypImp                 INPUT        BINARY
+CHI_PregInferImp             INPUT        BINARY
+CHI_RefractSurg              INPUT        BINARY
+CHI_RqtOrdNum                REJECTED     NOMINAL
+CHI_SeizureImp               INPUT        BINARY
+CHI_SkinCancer               INPUT        BINARY
+CHI_SleepApnImp              INPUT        BINARY
+CHI_SmokingInd               INPUT        BINARY
+CHI_StmGIPrbImp              INPUT        BINARY
+CHI_SurgeryHospImp           INPUT        BINARY
+CHI_TobaccoMedsInd           INPUT        BINARY
+CHI_TreatmentInd             INPUT        BINARY
+CHOL_CNT                     INPUT        INTERVAL
+CHOL_DEB                     INPUT        INTERVAL
+CHOL_RTO                     INPUT        INTERVAL
+CYCLE_TIME                   INPUT        INTERVAL
+Cardiologist_ind             INPUT        BINARY
+Chiropractor_ind             INPUT        BINARY
+Colorectal_ind               INPUT        BINARY
+Counselor_ind                INPUT        BINARY
+DEATHS                       INPUT        BINARY
+DEBI                         INPUT        INTERVAL
+DECLINED_RATED               INPUT        BINARY
+DIA_CNT                      INPUT        INTERVAL
+DRIVING_SECTION              INPUT        BINARY
+DUR                          INPUT        INTERVAL
+Dermatologist_ind            INPUT        BINARY
+ENDDATE                      INPUT        INTERVAL
+ENT_ind                      INPUT        BINARY
+Endocrinologist_ind          INPUT        BINARY
+FAMILY_DEB                   INPUT        INTERVAL
+FA_DATE                      INPUT        INTERVAL
+FCT3                         INPUT        NOMINAL
+FCT5                         INPUT        NOMINAL
+FCTI                         INPUT        NOMINAL
+FT_SERVICE_DATE              INPUT        INTERVAL
+FULLUW                       INPUT        INTERVAL
+Gastroenterologist_ind       INPUT        BINARY
+HDL_CNT                      INPUT        INTERVAL
+HEIGHT                       INPUT        INTERVAL
+ISSUED                       INPUT        INTERVAL
+LABSCOUNT                    INPUT        ORDINAL
+LABSDEB                      INPUT        INTERVAL
+LARGE_CASE_CDE               INPUT        NOMINAL
+LAY_FLAT                     INPUT        INTERVAL
+LC_IND                       INPUT        BINARY
+LIFE_ID                      ID           NOMINAL
+MASTER_CMPN_STS              INPUT        BINARY
+MED_FLAT                     INPUT        INTERVAL
+NET_DEBITS                   TARGET       INTERVAL
+NM_UW_CLASS                  INPUT        NOMINAL
+NOT_PM_IND                   REJECTED     INTERVAL
+NOT_TAKEN_IND                INPUT        BINARY
+NT2OT                        INPUT        INTERVAL
+NT2TO                        INPUT        INTERVAL
+Nephrologists_ind            INPUT        BINARY
+Neurologist_ind              INPUT        BINARY
+OBGYN_ind                    INPUT        BINARY
+Oncologist_ind               INPUT        BINARY
+Ophthalmologist_ind          INPUT        BINARY
+Opthamologist_ind            INPUT        BINARY
+Orthopedist_ind              INPUT        BINARY
+Other_ind                    INPUT        BINARY
+PLAN                         INPUT        INTERVAL
+PM_IND                       TARGET       BINARY
+POLICY_NUMBER                ID           NOMINAL                  POLICY_NUMBER
+POL_YRS                      INPUT        INTERVAL
+PREPAID_IND                  INPUT        NOMINAL
+PVAM                         COST         INTERVAL                 PVAM
+PVAM_ADJ                     COST         INTERVAL
+PVAM_ADK                     COST         INTERVAL
+PVAM_CLS                     COST         INTERVAL
+PVAM_DCL                     INPUT        INTERVAL
+PVAM_FLT                     INPUT        INTERVAL
+PVAM_NT2TO                   COST         INTERVAL
+PVM                          INPUT        INTERVAL
+Physical_ind                 INPUT        BINARY
+Plastic_ind                  INPUT        BINARY
+Podiatrist_ind               INPUT        BINARY
+ProviderSpec                 INPUT        NOMINAL
+Psychologist_ind             INPUT        BINARY
+Pulmonologist_ind            INPUT        BINARY
+REQ_COST                     COST         INTERVAL
+RPT_PRD                      REJECTED     NOMINAL
+Returns                      INPUT        INTERVAL                 Returns
+Rheumatologist_ind           INPUT        BINARY
+SEX                          INPUT        NOMINAL
+SMOKER_CODE                  INPUT        NOMINAL
+SRCE_FILE_YEAR_NUM           INPUT        NOMINAL
+SYS_CNT                      INPUT        INTERVAL
+TUP_INDICATOR                INPUT        NOMINAL
+Therapist_ind                INPUT        BINARY
+UNDERWRITE_AMT               INPUT        INTERVAL
+UWA000                       INPUT        INTERVAL
+UW_DECISION                  INPUT        NOMINAL
+Urologist_ind                INPUT        BINARY
+WAIVER_OF_PREM               INPUT        BINARY
+WEIGHT                       INPUT        INTERVAL
+YRS_SRVC                     INPUT        INTERVAL
+ZIP_CDE                      REJECTED     NOMINAL
+all_decline                  INPUT        BINARY
+allergy_bp                   INPUT        BINARY
+apnea_bmi                    INPUT        INTERVAL
+apnea_bp                     INPUT        BINARY
+apnea_high_bmi               INPUT        BINARY
+ashtm_allergy                INPUT        BINARY
+aviation                     INPUT        BINARY
+avocation                    INPUT        BINARY
+bmi_adj                      INPUT        INTERVAL
+bmi_chol                     INPUT        INTERVAL
+bmi_lab                      INPUT        INTERVAL
+bp_bmi                       INPUT        INTERVAL
+bp_chol                      INPUT        INTERVAL
+bp_lab                       INPUT        INTERVAL
+chol_lab                     INPUT        INTERVAL
+cnd_log                      INPUT        INTERVAL
+cnd_sqrt                     INPUT        INTERVAL
+crd_ind                      INPUT        BINARY
+dclrtd_ind                   INPUT        BINARY
+deaths_adj                   INPUT        BINARY
+driving                      INPUT        BINARY
+exact                        INPUT        BINARY
+high_agi_zip                 INPUT        BINARY
+high_bmi                     INPUT        BINARY
+lay_ind                      INPUT        BINARY
+low_agi_zip                  INPUT        BINARY
+male_ind                     INPUT        BINARY
+mib                          INPUT        BINARY
+nm_uw_class_int              INPUT        INTERVAL
+nm_uw_int_class              REJECTED     NOMINAL
+old_ind                      INPUT        BINARY
+perm_ind                     INPUT        BINARY
+pol_yrs_adj                  INPUT        INTERVAL
+pol_yrs_rnd                  INPUT        INTERVAL
+pp_ind                       INPUT        BINARY
+prior_dcl                    INPUT        BINARY
+prior_di_dcl                 INPUT        BINARY
+prior_pm                     INPUT        BINARY
+qa_missing                   INPUT        NOMINAL
+qa_sum                       INPUT        NOMINAL
+secmd_ind                    INPUT        BINARY
+smoke_ind                    INPUT        BINARY
+surgery_allergy              INPUT        BINARY
+surgery_anxiety              INPUT        BINARY
+surgery_bmi                  INPUT        INTERVAL
+surgery_bp                   INPUT        BINARY
+surgery_chest                INPUT        BINARY
+surgery_moles                INPUT        BINARY
+ultra_agi_zip                INPUT        BINARY
+uw_0608                      INPUT        BINARY
+uw_0911                      INPUT        BINARY
+vet_agent                    INPUT        BINARY
+xpcd_rating                  INPUT        BINARY
